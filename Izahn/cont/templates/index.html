@@ -1,0 +1,120 @@
+<!--
+    ELABORADO POR:
+    RIOS GONZALEZ ANGEL IVAN
+    LAZCANO ORTEGA MIGUEL ANGEL
+    SANCHEZ GARCIA JOHN CARLOS
+
+    UNIVERSIDAD AUTONOMA DE BAJA CALIFORNIA SUR
+    INGENIERIA EN DESARROLLO DE SOFTWARE
+-->
+
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static 'Style.css' %}">
+        <script src="{% static 'Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body class="bodyC">
+       
+        {% include 'barra.html' %}
+
+        <div class="cont-main"> <!-- Cada contenedor (div) esta hecho para que muestren su contenido segun el frame realizado en figma-->
+            <div  class="active" data-content id="paginaPrincipal"><!-- Pagina inicio 1 -->
+                <div class="div-banner">
+                    <img src="{% static './img/j1.jpg' %}" alt="j1" class="banner">
+                    <div class="posicion-banner">
+                        <div class="circulo1"></div>
+                        <div class="circulo2"></div>
+                        <div class="circulo3"></div>
+                    </div>
+                </div>
+                <div class="cont-p1">
+                    <div class="cat">
+                        <h6>Promociones</h6>
+                        <div class="img-cat">
+                            {% for producto in productos %}
+                            {% if forloop.counter <= 5 %}
+                            {% include '_producto.html' %}
+                            {% endif %}
+                            {% endfor %}
+                            <div class="flec">
+                                <img src="{% static './img/flechas.png' %}" alt="flechas" class="flechas">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cat">
+                        <h6>Tecnologia</h6>
+                        <div class="img-cat">
+                            {% for producto in productos %}
+                            {% if forloop.counter <= 10 %}
+                            {% if producto.id > 6 %}
+                            {% include '_producto.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            <div class="flec">
+                                <img src="{% static './img/flechas.png' %}" alt="flechas" class="flechas">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cat">
+                        <h6>Moda</h6>
+                        <div class="img-cat">
+                            {% for producto in productos %}
+                            {% if forloop.counter <= 15 %}
+                            {% if producto.id > 11 %}
+                            {% include '_producto.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            <div class="flec">
+                                <img src="{% static './img/flechas.png' %}" alt="flechas" class="flechas">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cat">
+                        <h6>Laptops</h6>
+                        <div class="img-cat">
+                            {% for producto in productos %}
+                            {% if forloop.counter <= 20 %}
+                            {% if producto.id > 16 %}
+                            {% include '_producto.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            <div class="flec">
+                                <img src="{% static './img/flechas.png' %}" alt="flechas" class="flechas">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cat">
+                        <h6>Deportes</h6>
+                        <div class="img-cat">
+                            {% for producto in productos %}
+                            {% if forloop.counter <= 25 %}
+                            {% if producto.id > 21 %}
+                            {% include '_producto.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            <div class="flec">
+                                <img src="{% static './img/flechas.png' %}" alt="flechas" class="flechas">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

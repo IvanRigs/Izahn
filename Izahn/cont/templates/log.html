@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static './Style.css' %}">
+        <script src="{% static './Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><!-- Iniciar sesion-->
+            <div class="frameIniciarORegistrarse"> 
+                <div class="inS-F">
+                    <header class="inS">
+                        <a href="/logR" style="text-decoration: none;">
+                            <img src="{% static './img/regresar.png' %}" alt="regresar" class="regresar-img" data-target="#paginaPrincipal">
+                        </a>
+                        <div class="cont-is">
+                            <form method="post" action="{% url 'login' %}" class="cont-is">
+                                <p class="iniciarS-font">Iniciar sesión</p>
+                                {% csrf_token %}
+                                <input type="email" placeholder="Correo" name="email" class="in-email" required>
+                                <input type="password" placeholder="Contraseña" name="password" class="in-email" required>
+                                <button type="submit" class="btn" data-target="#paginaPrincipal">Iniciar sesión</button>
+                            </form>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

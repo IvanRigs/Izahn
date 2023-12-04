@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static 'Style.css' %}">
+        <script src="{% static 'Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="bodyC">
+        {% include 'barra.html' %}
+        <div><!-- Informacion del producto -->
+            <div class="inf-pro">
+                <div class="prod-inf">
+                    <div class="img-inf">
+                        <img src="{% static 'img/' %}{{ producto.urlImg }}" class="img-prop-inf">
+                        <div class="meta-inf-img">
+                            <div class="primer-mid">
+                                <img src="{% static './img/estrella.png' %}" class="est-inf">
+                                <img src="{% static './img/estrella.png' %}" class="est-inf">
+                                <img src="{% static './img/estrella.png' %}" class="est-inf">
+                                <img src="{% static './img/estrellav.png' %}" class="est-inf">
+                            </div>
+                            <div class="segunda-mid">
+                                <div class="sM-p">
+                                    <img src="{% static './img/me-gusta.png' %}" class="il-inf">
+                                </div>
+                                <div class="sM-s">
+                                    <img src="{% static './img/anadir.png' %}" class="ssm-s">
+                                    <img src="{% static './img/comprar.png' %}" class="ssm-s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc-inf">
+                        <h2 class="font-title-inf">{{producto.nombre}}</h2>
+                        <p class="price-inf">${{producto.precio}} MXN</p>
+                        <p class="interes">En 3x <span class="verde">$88 sin interes </span> IVA Incluido</p>
+                        <div class="prod-cant-div">
+                            <div class="cant-prod-inf">
+                                <p class="cantidad-prod-comp">1</p> <!--TODO: FALTA AGREGAR LA VARIABLE DE COMPRA ------------------------------------------>
+                            </div>
+                            <img src="{% static './img/agg.png' %}" alt="agregar" class="img-agg">
+                            <img src="{% static './img/comprarrr.png' %}" alt="comprar" class="img-agg">
+                        </div>
+                        <h3 class="sub-title">Descripción</h3>
+                        <p class="inter">{{producto.descripcion}}</p>
+                    </div>
+                </div>
+                <div class="op-p">
+                    <h3 class="sub-title">Productos similares <a href="instagram.com/ivanrios_ss" target="_blank" class="vermas">Ver todo</a></h3>
+                    <div class="cat">
+                        <div class="img-cat">
+                            <div class="dist" data-target="#informacionProducto">
+                                <div class="prod">
+                                    <img src="{% static './img/a2.png' %}" alt="a1" class="img-prop">
+                                    <div class="mostrar">
+                                        <div class="estrellas">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                        </div>
+                                        <div class="post-atrib">
+                                            <img src="{% static './img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                                            <img src="{% static './img/anadir.png' %}" alt="agregar" class="atrib">
+                                            <img src="{% static './img/comprar.png' %}" alt="comprar" class="atrib">
+                                        </div>
+                                    </div>
+                                    <p class="name-prod">Pops Audifonos</p>
+                                    <p class="price-prod">$1,900.00 MXN</p>
+                                </div>
+                        </div>
+                        <div class="dist" data-target="#informacionProducto">
+                                <div class="prod">
+                                    <img src="{% static './img/a3.png' %}" alt="a2" class="img-prop">
+                                    <div class="mostrar">
+                                        <div class="estrellas">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                        </div>
+                                        <div class="post-atrib">
+                                            <img src="{% static './img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                                            <img src="{% static './img/anadir.png' %}" alt="agregar" class="atrib">
+                                            <img src="{% static './img/comprar.png' %}" alt="comprar" class="atrib">
+                                        </div>
+                                    </div>
+                                    <p class="name-prod">Audifonos Krakl</p>
+                                    <p class="price-prod">$1,500.00 MXN</p>
+                                </div>
+                        </div>
+                        <div class="dist" data-target="#informacionProducto">
+                                <div class="prod">
+                                    <img src="{% static './img/a1.png' %}" alt="a3" class="img-prop">
+                                    <div class="mostrar">
+                                        <div class="estrellas">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                        </div>
+                                        <div class="post-atrib">
+                                            <img src="{% static './img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                                            <img src="{% static './img/anadir.png' %}" alt="agregar" class="atrib">
+                                            <img src="{% static './img/comprar.png' %}" alt="comprar" class="atrib">
+                                        </div>
+                                    </div>
+                                    <p class="name-prod">ParAmoun Audifonos</p>
+                                    <p class="price-prod">$3,500.00 MXN</p>
+                                </div>
+                        </div>
+                        <div class="dist" data-target="#informacionProducto">
+                                <div class="prod">
+                                    <img src="{% static './img/a5.png' %}" alt="a4" class="img-prop">
+                                    <div class="mostrar">
+                                        <div class="estrellas">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                        </div>
+                                        <div class="post-atrib">
+                                            <img src="{% static './img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                                            <img src="{% static './img/anadir.png' %}" alt="agregar" class="atrib">
+                                            <img src="{% static './img/comprar.png' %}" alt="comprar" class="atrib">
+                                        </div>
+                                    </div>
+                                    <p class="name-prod">Audifonos Riks</p>
+                                    <p class="price-prod">$3,000.00 MXN</p>
+                                </div>
+                        </div>
+                        <div class="dist" data-target="#informacionProducto">
+                                <div class="prod">
+                                    <img src="{% static './img/a4.png' %}" alt="a5" class="img-prop">
+                                    <div class="mostrar">
+                                        <div class="estrellas">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrella.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                            <img src="{% static './img/estrellav.png' %}" class="estrellas-img">
+                                        </div>
+                                        <div class="post-atrib">
+                                            <img src="{% static './img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                                            <img src="{% static './img/anadir.png' %}" alt="agregar" class="atrib">
+                                            <img src="{% static './img/comprar.png' %}" alt="comprar" class="atrib">
+                                        </div>
+                                    </div>
+                                    <p class="name-prod">Audifonos Ozark</p>
+                                    <p class="price-prod">$900.00 MXN</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="op-p">
+                    <h3 class="sub-title">Opiniones del producto</h3>
+                    <img src="{% static './img/graficas.png' %}" alt="graficas" class="graficas">
+                   <div class="comment">
+                        <div class="comment-usr">
+                            <img src="{% static './img/usuario.png' %}" class="comment-user-img">
+                            <p class="name-user">ig.ivanrios_ss</p>
+                        </div>
+                        <p class="escr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis doloribus voluptate ratione neque. Autem eos harum asperiores quos aperiam, maiores inventore provident. Animi dignissimos tenetur iusto explicabo blanditiis perspiciatis.</p>
+                   </div>
+
+                   <div class="comment">
+                        <div class="comment-usr">
+                            <img src="{% static './img/usuario.png' %}" class="comment-user-img">
+                            <p class="name-user">SofGamer</p>
+                        </div>
+                        <p class="escr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis doloribus voluptate ratione neque. Autem eos harum asperiores quos aperiam, maiores inventore provident. Animi dignissimos tenetur iusto explicabo blanditiis perspiciatis.</p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-usr">
+                            <img src="{% static './img/usuario.png' %}" class="comment-user-img">
+                            <p class="name-user">Peddro</p>
+                        </div>
+                        <p class="escr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis doloribus voluptate ratione neque. Autem eos harum asperiores quos aperiam, maiores inventore provident. Animi dignissimos tenetur iusto explicabo blanditiis perspiciatis.</p>
+                    </div>
+
+                    <div class="comment">
+                        <div class="comment-usr">
+                            <img src="{% static './img/usuario.png' %}" class="comment-user-img">
+                            <p class="name-user">AngelG</p>
+                        </div>
+                        <p class="escr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore corporis doloribus voluptate ratione neque. Autem eos harum asperiores quos aperiam, maiores inventore provident. Animi dignissimos tenetur iusto explicabo blanditiis perspiciatis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+
+</html>

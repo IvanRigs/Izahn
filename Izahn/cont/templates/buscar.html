@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static 'Style.css' %}">
+        <script src="{% static 'Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body class="bodyC">
+        {% include 'barra.html' %}
+        <div><!-- Resultado de busqueda -->
+            <div class="RB">
+               <div class="enc-rb">
+                    <div class="enc-rb-c">
+                        <p class="busq">{{termino_busqueda}}</p>
+                        <p class="cant-res">{{resultados.count}} resultados</p>
+                    </div>
+                    <div class="ord-rb">
+                        <p class="cant-res">Ordenar por mas relevantes <img src="{% static './img/mostMas.png' %}" alt="mostrarMas" class="most-mas"></p>
+                    </div>
+               </div>
+               <div class="cont-p1">
+                    <div class="cat">
+                        <div class="img-cat">
+                            {% for resultados in resultados %}
+                            {% if forloop.counter <= 5 %}
+                            {% include 'resultadoB.html' %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-p1">
+                    <div class="cat">
+                        <div class="img-cat">
+                            {% for resultados in resultados %}
+                            {% if forloop.counter <= 10 %}
+                            {% if forloop.counter > 5 %}
+                            {% include 'resultadoB.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-p1">
+                    <div class="cat">
+                        <div class="img-cat">
+                            {% for resultados in resultados %}
+                            {% if forloop.counter <= 15 %}
+                            {% if forloop.counter > 10 %}
+                            {% include 'resultadoB.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-p1">
+                    <div class="cat">
+                        <div class="img-cat">
+                            {% for resultados in resultados %}
+                            {% if forloop.counter <= 20 %}
+                            {% if forloop.counter > 15 %}
+                            {% include 'resultadoB.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="cont-p1">
+                    <div class="cat">
+                        <div class="img-cat">
+                            {% for resultados in resultados %}
+                            {% if forloop.counter <= 25 %}
+                            {% if forloop.counter > 20 %}
+                            {% include 'resultadoB.html' %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </body>
+</html>
+

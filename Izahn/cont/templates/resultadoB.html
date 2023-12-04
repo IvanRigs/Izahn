@@ -1,0 +1,14 @@
+<div class="dist">
+    {% load static %}
+    <div class="prod">
+        <img src="{% static 'img/' %}{{ resultados.urlImg }}" alt="{{ resultados.nombre }}" class="img-prop">
+        <div class="mostrar">
+            <div class="post-atrib">
+                <img src="{% static 'img/me-gusta.png' %}" alt="me-gusta" class="atrib">
+                <img src="{% static 'img/anadir.png' %}" alt="agregar" class="atrib">
+            </div>
+        </div>
+        <p class="name-prod">{{ resultados.nombre }}</p>
+        <p class="price-prod">${{ resultados.precio }} MXN</p>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static './Style.css' %}">
+        <script src="{% static './Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div><!-- Registrarse -->
+            <div class="frameIniciarORegistrarse"> 
+                <div class="inS-F">
+                    <header class="inS">
+                        <a href="/logR" style="text-decoration: none;">
+                            <img src="{% static './img/regresar.png' %}" alt="regresar" class="regresar-img" data-target="#paginaPrincipal">
+                        </a>
+                        <div class="cont-is">
+                            <form method="post" action="{% url 'register' %}" class="cont-is">
+                                {% csrf_token %}
+                                <div class="cont-is">
+                                    <p class="regS-font">Registrarse</p>
+                                    <input type="text" placeholder="Nombre" class="in-r" required name="nombre" id="name">
+                                    <input type="text" placeholder="Apellidos" class="in-r" required name="apellidos" id="last_name">
+                                    <input type="email" placeholder="Correo" class="in-r" required name="email" id="email">
+                                    <input type="password" placeholder="Contraseña" class="in-r" required name="password" id="password">
+                                    <input type="password" placeholder="Confirma contraseña" class="in-r" required name="confirmPassword" id="confirmPassword">
+                                    <input type="tel" placeholder="Numero telefonico" class="in-r" required name="numero" id="number">
+                                    <input type="text" placeholder="Direccion" class="in-r" required name="direccion" id="direccion">
+                                    <input type="text" placeholder="Numero exterior" class="in-r" required>
+                                    <input type="text" placeholder="Ciudad" class="in-r" required>
+                                    <input type="text" placeholder="Codigo postal" class="in-r" required>
+                                    <button class="btn-r" type="submit" id="btnRegistrarse" data-target="#paginaPrincipal">Registrarse</button>
+                                </div>
+                            </form>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

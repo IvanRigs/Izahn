@@ -1,0 +1,27 @@
+<div class="main-bar"> <!-- Barra principal (Terminada; No cambiar nada aqui)-->
+    {% load static %}
+    <div class="bar">
+        <a href="/" style="text-decoration: none; color: white;">
+            <img src="{% static './img/icon.png' %}" alt="icon" class="icon">
+        </a>
+        <div class="inicio">
+            <a href="/" style="text-decoration: none; color: white;">
+                <p>Inicio</p>
+            </a>
+        </div>
+        <div class="categorias">
+            <p>Categorias</p>
+        </div>
+
+        <form method="GET" action="{% url 'buscar' %}" style="width:100%; height: 5vh;">
+            <input type="search" name="termino_busqueda" class="search" placeholder="Buscar">
+        </form>
+
+        <img src="{% static './img/search.png' %}" alt="search" class="search-icon">
+
+        <img src="{% static './img/carrito-de-compras.png' %}" alt="compras" class="carrito-img"id="carritoBoton">
+        <a href="/logR" style="text-decoration: none;">
+            <button id="button-user"><img src="{% static './img/usuario.png' %}" alt="perfil" class="perfil-img"></button>
+        </a>
+    </div>
+</div>

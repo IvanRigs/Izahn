@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+    <head>
+        <title>Izahn</title>
+        <link rel="icon" href="{% static './img/iconBW.png' %}">
+        <link rel="stylesheet" href="{% static './Style.css' %}">
+        <script src="{% static './Main.js' %}" defer></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <div class="mainIR">
+                <div class="titleIR">
+                    <a href="/" style="text-decoration: none; color: white;">
+                        <img src="{% static './img/iconBW.png' %}" alt="icon" class="iconIR" data-target="#paginaPrincipal">
+                    </a>
+                    <div class="column-fl">
+                        <div class="titleIRF">
+                            <h1 class="t-font">Izahn</h1>
+                        </div>
+                        <div class="textIR">
+                            <h3 class="centered-text">Inicia sesión para disfrutar de todas tus<br>compras.</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonIR">
+                    <a href="/log" style="text-decoration: none; color: white;">
+                        <button class="buttonPropIR2" data-target="#iniciarSesion">Iniciar sesion con Gmail</button>
+                    </a>
+                    <a href="/register" style="text-decoration: none; color: white;">
+                        <button class="buttonPropIR1" data-target="#registrarse">Otras opciones de registro</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
